@@ -47,7 +47,7 @@
     document.getElementById("docPrice").innerText = "$ " + formatMoney({{search.price}});
   });
 
-var url = '/price'
+var url = 'http://localhost:5000/price'
 d3.json(url, function(error, data) {
   console.log(data)
   });

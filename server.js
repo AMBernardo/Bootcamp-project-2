@@ -26,7 +26,7 @@ app.set("view engine", "handlebars");
 
 app.use(favicon(process.cwd() + "/public/img/circleQ.ico"));
 
-app.use('/price', populationRouter.getPopulations());
+app.use('http://localhost:5000/price', populationRouter.getPopulations());
 
 app.get('/searchinfo', function (req, res) {
     res.render('searchinfo', {
