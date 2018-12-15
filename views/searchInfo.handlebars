@@ -7,8 +7,8 @@
           <p align="center">
             <strong>Search ID number </strong>: {{search.id}}</p>
           <p>
-          <p class="term">
-          {{search.search}}</p>
+          <p>
+            <strong>Searching for </strong>: {{search.search}}</p>
           <p>
             <strong>Price </strong>: <span id="docPrice">$ {{search.price}}</span></p><br><br>
           <div id="graphChart"></div>
@@ -21,15 +21,7 @@
     </div>
   </div>
 </div>
-<style>
-  .line {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 1.5px;
-}
-</style>
-
-<script src="//d3js.org/d3.v3.js"></script>
+<script src="//d3js.org/d3.v3.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script>
   $(document).ready(function(){ 
@@ -47,19 +39,19 @@
     document.getElementById("docPrice").innerText = "$ " + formatMoney({{search.price}});
   });
 
-var url = '/price'
+var url = 'http://localhost:5000/price'
 d3.json(url, function(error, data) {
   console.log(data)
   });
 
 
   // Set the dimensions of the canvas  graph
-var margin = {top: 30, right: 20, bottom: 30, left: 50},
+var margin = {top: 30, right: 20, bottom: 30, left: 60},
     width = 600 - margin.left - margin.right,
     height = 270 - margin.top - margin.bottom;
 
 // Parse the date / time
-var parseDate = d3.time.format("%Y-%m-%dT%H:%M:%S.%LZ").parse;
+var parseDate = d3.time.format("%d-%b-%y").parse;
 
 // Set the ranges
 var x = d3.time.scale().range([0, width]);
@@ -78,7 +70,7 @@ var valueline = d3.svg.line()
     .y(function(d) { return y(d.price); });
     
 // Adds the svg canvas
-var svg = d3.select("#graph")
+var svg = d3.select("#graphChart")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)

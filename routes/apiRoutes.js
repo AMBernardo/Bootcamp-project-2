@@ -63,9 +63,9 @@ module.exports = function(app) {
       }
       //Sort Function
       function compare(a,b) {
-        if (a < b)
+        if (a.price < b.price)
           return -1;
-        if (a > b)
+        if (a.price > b.price)
           return 1;
         return 0;
       }

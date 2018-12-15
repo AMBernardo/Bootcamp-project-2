@@ -18,8 +18,6 @@
     "express-handlebars": "^3.0.0",
     "fs": "0.0.1-security",
     "husky": "^1.2.0",
-    "jquery": "^3.3.1",
-    "modules": "^0.4.0",
     "mysql": "^2.16.0",
     "mysql2": "^1.5.3",
     "scrape-it": "^5.1.1",
@@ -35,5 +33,17 @@
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TroyAG/Bootcamp-project-2.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/TroyAG/Bootcamp-project-2/issues"
+  },
+  "homepage": "https://github.com/TroyAG/Bootcamp-project-2#readme"
 }

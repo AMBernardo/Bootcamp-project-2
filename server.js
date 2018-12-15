@@ -7,7 +7,7 @@ var app = express();
 var db = require("./models");
 var populationRouter = require('./routes/d3');
 var app = express();
-var port = process.env.PORT || 5000;
+var PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -48,11 +48,11 @@ if (process.env.NODE_ENV === "test") {
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
-  app.listen(port, function() {
+  app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      port,
-      port
+      PORT,
+      PORT
     );
   });
 });
