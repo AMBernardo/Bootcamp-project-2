@@ -47,7 +47,7 @@
     document.getElementById("docPrice").innerText = "$ " + formatMoney({{search.price}});
   });
 
-var url = 'http://whats-my-worth.herokuapp.com/price'
+var url = '/price'
 d3.json(url, function(error, data) {
   console.log(data)
   });
@@ -87,7 +87,7 @@ var svg = d3.select("#graph")
               "translate(" + margin.left + "," + margin.top + ")");
 
 // Get the data\
-var url = 'http://localhost:5000/price'
+var url = '/price'
 d3.json(url, function(error, data) {
    data.forEach(function(d) {
         d.createdAt = parseDate(d.createdAt );
