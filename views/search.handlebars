@@ -18,7 +18,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col offset-s5 offset-m5 offset-l5 offset-xl5">
+            <div class="col offset-s3 offset-m5 offset-l5 offset-xl5">
               <button  id="submit" class="btn waves-effect waves-light"  type="submit" name="action">Submit!
                 <i class="material-icons right">send</i>
               </button>
@@ -28,6 +28,7 @@
         <br>
         <div class="divider"></div>
         <h3 class="animated flipInX delay-1s slower">Searches:</h3>
+        <div style="overflow-x:auto;">
         <table class="highlight responsive-table">
           <thead class="animated zoomIn delay-2s slower">
             <tr>
@@ -49,6 +50,7 @@
             </tr>
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   </div>
@@ -68,27 +70,33 @@
                 </ul>
         </div>
 
-        <div id="modal1" class="modal">
+        <div id="modal1" class="modal animated zoomIn">
             <div class="modal-content">
               <h4>App Information</h4>
-              <p>A full-stack web application that searches an item then populates for the cheapest price.</p>
+              <p>A full-stack web application that helps the user search for the product's average price and provides a price history graph of the item searched by the user.</p>
             </div>
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
             </div>
           </div>
 
-          <div id="modal2" class="modal">
+          <div id="modal2" class="modal animated zoomIn">
             <div class="modal-content">
               <h4>Technologies Used</h4>
-              <p>A bunch of text hjagdfladbfljhgadbsghkfljkSBNDA dashbfsk</p>
+              <ul>
+                <li>- Materialize CSS</li>
+                <li>- MySQL</li>
+                <li>- Heroku</li>
+                <li>- D3</li>
+                <li>- Scrape-It</li>
+              </ul>
             </div>
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
             </div>
           </div>
-
-          <div id="modal3" class="modal bottom-sheet">
+          
+          <div id="modal3" class="modal bottom-sheet animated fadeInUp">
                 <div class="modal-content">
                   <h4 class="center-align">Developers</h4>
                   
@@ -96,25 +104,25 @@
                       <li class="collection-item avatar">
                       <span class="title">Jeric Ayonke</span>
                       <p class="name">Front End Dev/ Back End Dev</p>
-                      <p class="job">https://github.com/JecoLantern</p>
+                      <a class="job" href="https://github.com/JecoLantern">https://github.com/JecoLantern</a>
                       <a href="https://www.linkedin.com/in/jeric-ayonke-93536443/" class="secondary-content"><i class="material-icons">contact_mail</i></a>
                       </li>
                       <li class="collection-item avatar">
                       <span class="title">Troy Gordon</span>
                       <p class="name">Back End Dev</p>
-                      <p class="job">https://github.com/TroyAG</p>
-                      <a href="!#" class="secondary-content"><i class="material-icons">contact_mail</i></a>
+                      <a class="job" href="https://github.com/TroyAG">https://github.com/TroyAG</a>
+                      <a href="https://www.linkedin.com/in/troy-gordon-008b38165/" class="secondary-content"><i class="material-icons">contact_mail</i></a>
                       </li>
                       <li class="collection-item avatar">
                       <span class="title">Daniel Grams</span>
                       <p class="name">Back End Dev</p>
-                      <p class="job">https://github.com/dgrams99</p>
+                      <a class="job" href="https://github.com/dgrams99">https://github.com/dgrams99</a>
                       <a href="https://www.linkedin.com/in/daniel-grams-8b7133172/" class="secondary-content"><i class="material-icons">contact_mail</i></a>
                       </li>
                       <li class="collection-item avatar">
                       <span class="title">Alfonso Miguel Bernardo</span>
                       <p class="name">Front End Dev</p>
-                      <p class="job">https://github.com/AMBernardo</p>
+                      <a class="job" href="https://github.com/AMBernardo">https://github.com/AMBernardo</a>
                       <a href="https://www.linkedin.com/in/alfonso-miguel-bernardo-75a678167/" class="secondary-content"><i class="material-icons">contact_mail</i></a>
                       </li>
                   </ul>
@@ -125,12 +133,14 @@
                 </div>
             </div>
   </div>
+  
 </div>
-
 
 </main>
 
+
 <footer>
+  
   <div class="container">
     <div class="col s12 m12 l12 xl12">
       <p align="center">
