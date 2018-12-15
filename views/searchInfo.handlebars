@@ -47,7 +47,7 @@
     document.getElementById("docPrice").innerText = "$ " + formatMoney({{search.price}});
   });
 
-var url = '/price'
+var url = 'http://whats-my-worth.herokuapp.com/price'
 d3.json(url, function(error, data) {
   console.log(data)
   });
