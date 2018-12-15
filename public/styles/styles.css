@@ -14,28 +14,6 @@ footer {
   z-index: 1;
 }
 
-.fixed_header{
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-}
-
-.fixed_header tbody{
-overflow: auto !important;
-height: 100px;
-}
-
-/* .fixed_header thead {
-background: black;
-color:#fff;
-} */
-
-.fixed_header th, .fixed_header td {
-padding: 5px;
-text-align: left;
-width: 200px;
-}
-
 .greeting {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bolder;
@@ -87,12 +65,6 @@ width: 200px;
   margin: 0 !important;
 }
 
-g {
-  /* left: 2rem; */
-  /* align-self: center;
-  margin: 1rem; */
-  justify-content: center;
-}
 
 /* ------Animated BG styling----------- */
 
@@ -101,8 +73,8 @@ body{
 min-height: 100%;
 height: 100vh;
 background-image: url(../img/BG.jpg);
-/* background-position: bottom; */
-/* background-repeat: no-repeat; */
+background-attachment: fixed; 
+background-repeat: repeat;
 background-size: cover;
 /* overflow: hidden; */
 position: absolute;
@@ -118,7 +90,7 @@ border-radius:50%;
 -webkit-border-radius:50%;
 width:500px;
 position: fixed;
-left: 25rem;
+left: 34rem;
 top: 2rem;
 animation: spin 15s ease-in-out infinite;
 z-index: -1;
@@ -134,7 +106,7 @@ border-radius:50%;
 -webkit-border-radius:50%;
 width:500px;
 position: fixed;
-left: 25rem;
+left: 34rem;
 top: 2rem;
 border-color: #09383E transparent;
 animation: spin2 15s ease-in-out infinite;
@@ -176,24 +148,7 @@ opacity: .7;
 }
 } 
 
-@media only screen and (max-width: 600px) {
-  #circle {
-    left: 3rem;
-    height: 300px;
-    width: 300px;
-  }
 
-  #transCircle{
-    left: 3rem;
-    height: 300px;
-    width: 300px;
-  }
-
-  .dial:after{
-    background-size: 280px;
-  }
-
-}
 
 /* -----FABs and modals styling----- */
 div.fixed-action-btn{
@@ -224,32 +179,84 @@ label{
 }
 
 /* landing button color */
-a.waves-effect.waves-light.btn{
-  background-color: rgb(18, 73, 105) !important;
+button#submmit.waves-effect.waves-light.btn{
+  background-color: cadetblue !important;
 }
 /* landing drop down color */
 input.select-dropdown:focus {
-  border-bottom: 1px solid rgb(2, 213, 250) !important;
+  border-bottom: 1px solid cadetblue !important;
 }
 /* options text color */
 span{
-  color: #09383E !important;
+  color: cadetblue !important;
 }
 
 
 /* search text area color and the icon color*/
 .input-field input[type=text]:focus {
-  border-bottom: 1px solid red !important;
-  box-shadow: 0 1px 0 0 red !important;
+  border-bottom: 1px solid cadetblue !important;
+  box-shadow: 0 1px 0 0 cadetblue !important;
 }
 
 i.material-icons.prefix.active{
-  color: red !important;
+  color: cadetblue !important;
 }
 
 /* search button color */
 button#submit.btn.waves-effect.waves-light{
-  background-color: rgb(18, 73, 105) !important;
+  background-color: cadetblue !important;
 }
 
+button.btn.delete{
+  background-color: cadetblue;
+}
 
+footer{
+  background-color: transparent;
+}
+
+span.title{
+  color: black !important;
+}
+
+@media only screen and (max-width: 667px) {
+  #circle {
+    left: 3rem;
+    height: 300px;
+    width: 300px;
+  }
+
+  #transCircle{
+    left: 3rem;
+    height: 300px;
+    width: 300px;
+  }
+
+  .dial:after{
+    background-size: 280px;
+  }
+
+  #formWrapper{
+    margin-top: 5rem !important;
+  }
+
+}
+
+@media only screen and (max-width: 980px) and (min-width: 668px){
+  #circle {
+    left: 12rem;
+    height: 500px;
+    width: 500px;
+  }
+
+  #transCircle{
+    left: 12rem;
+    height: 500px;
+    width: 500px;
+  }
+
+  .dial:after{
+    background-size: 470px;
+  }
+
+}
